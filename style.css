@@ -21,6 +21,7 @@ header {
     padding-block: 15px;
     max-width: 1400px;
     margin-inline: auto;
+    position: relative;
 
 }
 
@@ -147,3 +148,71 @@ nav>ul>li {
     right: -3px;
     bottom: 4px;
 }
+
+.close-icon,
+.Hamburger,
+.Hamburger input {
+    display: none;
+}
+
+@media (max-width:950px) {
+
+    .close-icon,
+    .Hamburger {
+        display: block;
+    }
+
+    .container {
+        padding-block: 10px;
+        padding-inline: 20px;
+    }
+
+    .nav-user-container {
+        display: none;
+        flex-direction: column-reverse;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 1);
+        border: 1.5px solid rgba(233, 234, 235, 1);
+        box-shadow: 0px 4px 10px 0px rgba(30, 27, 27, 0.1);
+        border-radius: 5px;
+        width: 290px;
+        top: 10px;
+        right: 10px;
+        align-items: flex-start;
+        padding-block: 12px;
+    }
+    .Hamburger:has(input:checked) + .nav-user-container {
+        display: flex;
+    }
+
+    nav {
+        margin-inline: unset;
+        padding-left: 24px;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        gap: 0;
+        justify-content: flex-start;
+    }
+
+    nav>ul>li {
+        padding-block: 8px;
+    }
+
+    .user {
+        justify-content: left;
+        border-bottom: 1px solid rgba(233, 234, 235, 1);
+        width: 100%;
+        padding-inline: 24px;
+        padding-bottom: 5px;
+        gap: 10px;
+    }
+
+    .close-icon {
+        margin-left: auto;
+        cursor: pointer;
+    }
+    
+    }
+    
